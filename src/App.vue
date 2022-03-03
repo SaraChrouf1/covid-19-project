@@ -132,6 +132,27 @@
 
 
         </div>
+        <footer class="text-center text-lg-start mastheadsmall d-flex flex-column" >
+          <div class="container d-flex justify-content-center pt-5">
+           
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+                 <a class="link-light" href="https://www.linkedin.com/in/sara-sharrouf-157056167/"><font-awesome-icon icon="fa-brands fa-linkedin" /></a>
+            </button>
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+               <a class="link-light" href="mailto:sarasharrouf.1234@gmail.com"><font-awesome-icon icon="fa-solid fa-envelope" /></a>
+            </button>
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+             <a class="link-light" href="https://github.com/SaraSharrouf"><font-awesome-icon icon="fa-brands fa-github" /></a> 
+            </button>
+          </div>
+
+          <!-- Copyright -->
+          <div class="text-center text-white mt-auto p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" href="https://www.linkedin.com/in/sara-sharrouf-157056167/">Sara Chrouf</a>
+          </div>
+          <!-- Copyright -->
+        </footer>    
 
         
     </div>
@@ -792,6 +813,15 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+.mastheadsmall{
+
+    height: 20vh;
+    min-height: 20px;
+    background-image: url('https://source.unsplash.com/aZKctjHYjwI/1920x1080');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 </style>
