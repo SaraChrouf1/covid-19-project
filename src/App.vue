@@ -113,6 +113,7 @@
           </div>
 
           <!-- Copyright -->
+          
           <div class="text-center text-white mt-auto p-2" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2022 Copyright:
             <a class="text-white" href="https://www.linkedin.com/in/sara-sharrouf-157056167/">Sara Chrouf</a>
