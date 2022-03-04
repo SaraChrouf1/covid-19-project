@@ -108,7 +108,7 @@
                <a class="link-light" href="mailto:sarasharrouf.1234@gmail.com"><font-awesome-icon icon="fa-solid fa-envelope" /></a>
             </button>
             <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
-             <a class="link-light" href="https://github.com/SaraSharrouf"><font-awesome-icon icon="fa-brands fa-github" /></a> 
+             <a class="link-light" href="https://github.com/SaraChrouf1"><font-awesome-icon icon="fa-brands fa-github" /></a> 
             </button>
           </div>
 
