@@ -65,41 +65,7 @@
                         </v-tab>
                     </vue-tabs>
 
-<!-- ========== Start Section
 
-                    <ul class="nav nav-tabs" id="myTab">
-                        <li class="nav-item">
-                            <a href="#active" class="nav-link active" data-bs-toggle="tab">Active</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#confirmed" class="nav-link" data-bs-toggle="tab">Confirmed</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#dead" class="nav-link" data-bs-toggle="tab">Dead</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#recovered" class="nav-link" data-bs-toggle="tab">Recovered</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane fade show active" id="active">
-                            
-                            <apexchart type="bar" height="350" :options="activeBarChartOptions" :series="activeBarSeries"></apexchart>
-                        </div>
-                        <div class="tab-pane fade" id="confirmed">
-                            
-                            <apexchart type="bar" height="350" :options="confirmedBarChartOptions" :series="confirmedBarSeries"></apexchart>
-                        </div>
-                        <div class="tab-pane fade" id="dead">
-                            
-                            <apexchart type="bar" height="350" :options="deadBarChartOptions" :series="deadBarSeries"></apexchart>
-                        </div>
-                         <div class="tab-pane fade" id="recovered">
-                             
-                            <apexchart type="bar" height="350" :options="recoveredBarChartOptions" :series="recoveredBarSeries"></apexchart>
-                        </div>
-                    </div>
-                     ========== -->
                 </div>
 
 
@@ -539,21 +505,21 @@ export default {
                 },
                 {
                 name :'Total Confirmed  cases',
-                data: indixes.map(i => this.confirmed[i]),
+                data: indixes.map(j => this.confirmed[j]),
                 },
                 {
                 name :'Total deaths ',
-                data: indixes.map(i => this.deaths[i]),
+                data: indixes.map(k => this.deaths[k]),
 
                 },
                 {
                 name :'Total recovered cases',
-                data: indixes.map(i => this.recovers[i]),
+                data: indixes.map(l => this.recovers[l]),
 
                 },
             
             ];
-            const subAreas =indixes.map(i => this.areas[i])
+            const subAreas =indixes.map(t => this.areas[t])
             this.totalSeries=finalTotals;
             this.totalChartOptions = {...this.totalChartOptions, ...{
                 chart: {
@@ -626,11 +592,11 @@ export default {
         if (res.status == 200){
             var temps=res.data.features;
             
-            var temp;
-            for (var i = 0, len = temps.length; i < len; i++) {
-                temp = temps[i]; // department
+            var temp1;
+            for (var x = 0, leni = temps.length; x < leni; x++) {
+                temp1 = temps[x]; // department
                 
-                temps[i] = temp.attributes 
+                temps[x] = temp1.attributes 
             }
             this.testsData=temps;                                                        
             this.reducedTestsData = this.testsData.map(({ ReportDate, DailyTest }) => ({
@@ -651,11 +617,11 @@ export default {
         if (res2.status == 200){
             var tempsTotalByArea=res2.data.features;
             
-            var temp;
-            for (var i = 0, len = tempsTotalByArea.length; i < len; i++) {
-                temp = tempsTotalByArea[i]; // department
+            var temp2;
+            for (var y = 0, len = tempsTotalByArea.length; y < len; y++) {
+                temp2 = tempsTotalByArea[y]; // department
                 
-                tempsTotalByArea[i] = temp.attributes 
+                tempsTotalByArea[y] = temp2.attributes 
             }
 
             this.TotalByArea=tempsTotalByArea;                                                        
@@ -676,9 +642,9 @@ export default {
             var deaths=[];
             var recovers=[];
 
-           for(let i = 0; i < result.length; i++){
-                areas[i]=result[i][0];
-                actives[i]=result[i][1];
+           for(let z = 0; z < result.length; z++){
+                areas[z]=result[z][0];
+                actives[z]=result[z][1];
                 
                 }
             this.actives=actives
@@ -703,9 +669,9 @@ export default {
           this.activeAreas={data:actives,areas: areas}
 
           result = result.sort((a, b) => b[2] - a[2]);
-          for(let i = 0; i < result.length; i++){
-                areas[i]=result[i][0];
-                confirmed[i]=result[i][2];
+          for(let s= 0; s < result.length; s++){
+                areas[s]=result[s][0];
+                confirmed[s]=result[s][2];
                 }
 
           this.confirmedAreas={data:confirmed,areas: areas}
@@ -724,9 +690,9 @@ export default {
 
 
             result = result.sort((a, b) => b[3] - a[3]);
-            for(let i = 0; i < result.length; i++){
-                    areas[i]=result[i][0];
-                    deaths[i]=result[i][3];
+            for(let g = 0; g < result.length; g++){
+                    areas[g]=result[g][0];
+                    deaths[g]=result[g][3];
                     }
                     
             this.deathsAreas={data:deaths,areas: areas}
@@ -743,9 +709,9 @@ export default {
                 }};
 
             result = result.sort((a, b) => b[4] - a[4]);
-            for(let i = 0; i < result.length; i++){
-                    areas[i]=result[i][0];
-                    recovers[i]=result[i][4];
+            for(let p = 0; p < result.length; p++){
+                    areas[p]=result[p][0];
+                    recovers[p]=result[p][4];
                     }
 
             this.recoverdAreas={data:recovers,areas: areas}
